@@ -26,6 +26,11 @@ class App extends Component {
 
   }
 
+  parserData(data){
+    console.log(data);
+    
+  }
+
   render(){
     return(
       <div className="main-page">
@@ -34,6 +39,20 @@ class App extends Component {
             <p>Get My Repositories </p>
           </button>
 
+        </div>
+
+        <div className="body">
+          <div>
+              {
+                this.state.dataListRepos.map((data) =>{
+                  return(
+                    <button className="btn-listRepos" onClick={()=>{this.parserData(data)}} style={{backgroundColor: 'white' }}>
+                      <p>{data.name}</p>
+                    </button>
+                  )         
+                })
+              }         
+            </div>
         </div>
         
       </div>
