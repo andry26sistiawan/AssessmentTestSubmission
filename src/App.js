@@ -8,6 +8,23 @@ class App extends Component {
     super(props);
     this.state = {
       dataListRepos: [],
+      dataListRepos: [],
+      fullname : "",
+      private : '',
+      ownerLogin : "",
+      ownerID : "",
+      ownerNodeId : "",
+      ownerUrl :"",
+      ownerType :"",
+      htmlUrl : "",
+      description : "",
+      createdAt : "",
+      updatedAt :"",
+      pushedAt: "",
+      gitURL : "",
+      watchersCount: "",
+      language : "",
+      defaultBranch :""
     };
   }
 
@@ -29,6 +46,25 @@ class App extends Component {
 
   parserData(data){
     console.log(data);
+    this.setState({
+      aktifButton : data.name,
+      fullname : data.full_name,
+      private : data.private.toString(),
+      ownerLogin : data.owner.login,
+      ownerID : data.owner.id,
+      ownerNodeId : data.owner.node_id,
+      ownerUrl : data.owner.url,
+      ownerType : data.owner.type,
+      htmlUrl : data.html_url,
+      description : data.description,
+      createdAt : data.created_at,
+      updatedAt : data.updated_at,
+      pushedAt : data.pushed_at,
+      gitURL : data.git_url,
+      watchersCount :data.watchers_count,
+      language : data.language,
+      defaultBranch : data.default_branch
+    });
     
   }
 
@@ -57,22 +93,22 @@ class App extends Component {
 
           <div className="card-info" style={{borderWidth:1, borderRadius:8}}>
             <div>
-              <ItemCard tittle={"Fullname : "}  value={"andry26sistiawan/ReactNativeClone"}/>
-              <ItemCard tittle={"Private : "}  value={"False"}/> 
-              <ItemCard tittle={"Owner Login : "}  value={"andry26sistiawan"}/> 
-              <ItemCard tittle={"Owner ID : "}  value={"59561635"}/> 
-              <ItemCard tittle={"Owner Node Id : "}  value={"MDQ6VXNlcjU5NTYxNjM1"}/> 
-              <ItemCard tittle={"Owner Url : "}  value={"https://api.github.com/users/andry26sistiawan"}/>
-              <ItemCard tittle={"Owner Type : "}  value={"User"}/>
-              <ItemCard tittle={"Html Url : "}  value={"https://github.com/andry26sistiawan/AndrySistiawan_Tokopandai"}/>  
-              <ItemCard tittle={"Description : "}  value={"null"}/>
-              <ItemCard tittle={"Created at : "}  value={"2020-09-08T19:54:33Z"}/>
-              <ItemCard tittle={"Updated at : "}  value={"2020-09-08T20:08:53Z"}/>
-              <ItemCard tittle={"Pushed at : "}  value={"2020-09-08T20:08:51Z"}/>
-              <ItemCard tittle={"Git Url : "}  value={"git://github.com/andry26sistiawan/AndrySistiawan_Tokopandai.git"}/>
-              <ItemCard tittle={"Watchers Count : "}  value={"0"}/>
-              <ItemCard tittle={"Language : "}  value={"JavaScript"}/>
-              <ItemCard tittle={"Default Branch : "}  value={"Master"}/>
+              <ItemCard tittle="Fullname :" value = {this.state.fullname} />
+              <ItemCard tittle="Private :" value = {this.state.private} />
+              <ItemCard tittle="Owner Login :" value = {this.state.ownerLogin} />
+              <ItemCard tittle="Owner ID :" value = {this.state.ownerID} />
+              <ItemCard tittle="Owner Node Id :" value = {this.state.ownerNodeId} />
+              <ItemCard tittle="Owner Url :" value = {this.state.ownerUrl} />
+              <ItemCard tittle="Owner Type :" value = {this.state.ownerType} />
+              <ItemCard tittle="Html Url :" value = {this.state.htmlUrl} />
+              <ItemCard tittle="Description :" value = {this.state.description == null ? "Null" : this.state.description} />
+              <ItemCard tittle="Created at :" value = {this.state.createdAt} />
+              <ItemCard tittle="Updated at :" value = {this.state.updatedAt} />
+              <ItemCard tittle="Pushed at :" value = {this.state.pushedAt} />
+              <ItemCard tittle="Git Url :" value = {this.state.gitURL} />
+              <ItemCard tittle="Watchers Count :" value = {this.state.watchersCount} />
+              <ItemCard tittle="Language :" value = {this.state.language == null ? "Null" : this.state.language} />
+              <ItemCard tittle="Default Branch :" value = {this.state.defaultBranch} />
 
             </div>
           
