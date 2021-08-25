@@ -52,7 +52,83 @@ class App extends Component {
                   )         
                 })
               }         
+          </div>
+
+          <div className="card-info" style={{borderWidth:1, borderRadius:8}}>
+            <div>
+              <div>               
+                <span style={{fontSize:18, color:'white'}}>Name :  </span>
+                <span style={{fontSize:18, color:'white'}}>ReactNativeClone</span>
+              </div>
+              <div>               
+                <span style={{fontSize:18, color:'white'}}>Fullname : </span>
+                <span style={{fontSize:18, color:'white'}}>andry26sistiawan/ReactNativeClone</span>
+              </div> 
+              <div>                
+                <span style={{fontSize:18, color:'white'}}>Private : </span> 
+                <span style={{fontSize:18, color:'white'}}>False</span>
+              </div>
+              <div>               
+                <span style={{fontSize:18, color:'white'}}>Owner Login : </span>
+                <span style={{fontSize:18, color:'white'}}>andry26sistiawan</span>
+              </div>
+              <div>               
+                <span style={{fontSize:18, color:'white'}}>Owner ID : </span>
+                <span style={{fontSize:18, color:'white'}}>59561635</span>
+              </div>
+              <div>               
+                <span style={{fontSize:18, color:'white'}}>Owner Node Id : </span>
+                <span style={{fontSize:18, color:'white'}}>MDQ6VXNlcjU5NTYxNjM1</span>
+              </div>
+              <div>               
+                <span style={{fontSize:18, color:'white'}}>Owner Url : </span>
+                <span style={{fontSize:18, color:'white'}}>https://api.github.com/users/andry26sistiawan</span>
+              </div>
+              <div>               
+                <span style={{fontSize:18, color:'white'}}>Owner Type : </span>
+                <span style={{fontSize:18, color:'white'}}>User</span>
+              </div>
+              <div>               
+                <span style={{fontSize:18, color:'white'}}>Html Url : </span>
+                <span style={{fontSize:18, color:'white'}}>https://github.com/andry26sistiawan/AndrySistiawan_Tokopandai</span>
+              </div>
+              <div>               
+                <span style={{fontSize:18, color:'white'}}>Description : </span>
+                <span style={{fontSize:18, color:'white'}}>null</span>
+              </div>
+              <div>               
+                <span style={{fontSize:18, color:'white'}}>Created at : </span>
+                <span style={{fontSize:18, color:'white'}}>2020-09-08T19:54:33Z</span>
+              </div>
+              <div>               
+                <span style={{fontSize:18, color:'white'}}>Updated at : </span>
+                <span style={{fontSize:18, color:'white'}}>2020-09-08T20:08:53Z</span>
+              </div>
+              <div>               
+                <span style={{fontSize:18, color:'white'}}>Pushed at : </span>
+                <span style={{fontSize:18, color:'white'}}>2020-09-08T20:08:51Z</span>
+              </div>
+              <div>               
+                <span style={{fontSize:18, color:'white'}}>Git Url : </span>
+                <span style={{fontSize:18, color:'white'}}>git://github.com/andry26sistiawan/AndrySistiawan_Tokopandai.git</span>
+              </div>
+              <div>               
+                <span style={{fontSize:18, color:'white'}}>Watchers Count : </span>
+                <span style={{fontSize:18, color:'white'}}>0</span>
+              </div>
+              <div>               
+                <span style={{fontSize:18, color:'white'}}>Language : </span>
+                <span style={{fontSize:18, color:'white'}}>JavaScript</span>
+              </div>
+              <div>               
+                <span style={{fontSize:18, color:'white'}}>Default Branch : </span>
+                <span style={{fontSize:18, color:'white'}}>Master</span>
+              </div>
+
             </div>
+          
+          </div>
+
         </div>
         
       </div>
