@@ -68,6 +68,34 @@ class App extends Component {
     
   }
 
+  _cardInfoRender(){
+    return(
+      <div className="card-info" style={{borderWidth:1, borderRadius:8}}>
+        <div>
+            <div style={{}}>
+              <ItemCard tittle="Fullname :" value = {this.state.fullname} />
+              <ItemCard tittle="Private :" value = {this.state.private} />
+              <ItemCard tittle="Owner Login :" value = {this.state.ownerLogin} />
+              <ItemCard tittle="Owner ID :" value = {this.state.ownerID} />
+              <ItemCard tittle="Owner Node Id :" value = {this.state.ownerNodeId} />
+              <ItemCard tittle="Owner Url :" value = {this.state.ownerUrl} />
+              <ItemCard tittle="Owner Type :" value = {this.state.ownerType} />
+              <ItemCard tittle="Html Url :" value = {this.state.htmlUrl} />
+              <ItemCard tittle="Description :" value = {this.state.description == null ? "Null" : this.state.description} />
+              <ItemCard tittle="Created at :" value = {this.state.createdAt} />
+              <ItemCard tittle="Updated at :" value = {this.state.updatedAt} />
+              <ItemCard tittle="Pushed at :" value = {this.state.pushedAt} />
+              <ItemCard tittle="Git Url :" value = {this.state.gitURL} />
+              <ItemCard tittle="Watchers Count :" value = {this.state.watchersCount} />
+              <ItemCard tittle="Language :" value = {this.state.language == null ? "Null" : this.state.language} />
+              <ItemCard tittle="Default Branch :" value = {this.state.defaultBranch} />
+            </div>
+        </div>
+          
+      </div>
+    )
+  }
+
   render(){
     return(
       <div className="main-page">
@@ -91,28 +119,8 @@ class App extends Component {
               }         
           </div>
 
-          <div className="card-info" style={{borderWidth:1, borderRadius:8}}>
-            <div>
-              <ItemCard tittle="Fullname :" value = {this.state.fullname} />
-              <ItemCard tittle="Private :" value = {this.state.private} />
-              <ItemCard tittle="Owner Login :" value = {this.state.ownerLogin} />
-              <ItemCard tittle="Owner ID :" value = {this.state.ownerID} />
-              <ItemCard tittle="Owner Node Id :" value = {this.state.ownerNodeId} />
-              <ItemCard tittle="Owner Url :" value = {this.state.ownerUrl} />
-              <ItemCard tittle="Owner Type :" value = {this.state.ownerType} />
-              <ItemCard tittle="Html Url :" value = {this.state.htmlUrl} />
-              <ItemCard tittle="Description :" value = {this.state.description == null ? "Null" : this.state.description} />
-              <ItemCard tittle="Created at :" value = {this.state.createdAt} />
-              <ItemCard tittle="Updated at :" value = {this.state.updatedAt} />
-              <ItemCard tittle="Pushed at :" value = {this.state.pushedAt} />
-              <ItemCard tittle="Git Url :" value = {this.state.gitURL} />
-              <ItemCard tittle="Watchers Count :" value = {this.state.watchersCount} />
-              <ItemCard tittle="Language :" value = {this.state.language == null ? "Null" : this.state.language} />
-              <ItemCard tittle="Default Branch :" value = {this.state.defaultBranch} />
 
-            </div>
-          
-          </div>
+          {this._cardInfoRender()}    
 
         </div>
         
