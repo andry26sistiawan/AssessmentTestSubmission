@@ -1,6 +1,7 @@
 import './app.scss';
 import { Component } from 'react';
 import ItemCard from './components/ItemCard';
+import Instruction from '../src/assets/instruction1.jpg'
 
 class App extends Component {
 
@@ -119,8 +120,26 @@ class App extends Component {
               }         
           </div>
 
+          {
+            this.state.dataListRepos.length === 0 ?
+              <div className="info"> 
+                <div style={{marginBottom:30}} >
+                  <p>Instructions</p>
+                  <p>1. Silahkan klick Button "Get My Repositories"</p>
+                  <p>2. Silahkan pilih Repositories yang diinginkan</p>
+                  <p>3. Pastikan terhubung internet</p>
+                </div>
+                <div>
+                    <img src={Instruction} style={{width:550, height:250}} />
+                </div>
+                
+              </div>
+            :
+              this._cardInfoRender()
+            
+          }
 
-          {this._cardInfoRender()}    
+ 
 
         </div>
         
