@@ -97,6 +97,23 @@ class App extends Component {
     )
   }
 
+  _instruction(){
+    return(
+      <div className="info"> 
+        <div style={{marginBottom:30}} >
+            <p>Instructions</p>
+            <p>1. Silahkan klick Button "Get My Repositories"</p>
+            <p>2. Silahkan pilih Repositories yang diinginkan</p>
+            <p>3. Pastikan terhubung internet</p>
+          </div>
+            <div>
+              <img src={Instruction} style={{width:550, height:250}} />
+            </div>
+              
+      </div>
+    )
+  }
+
   render(){
     return(
       <div className="main-page">
@@ -122,21 +139,9 @@ class App extends Component {
 
           {
             this.state.dataListRepos.length === 0 ?
-              <div className="info"> 
-                <div style={{marginBottom:30}} >
-                  <p>Instructions</p>
-                  <p>1. Silahkan klick Button "Get My Repositories"</p>
-                  <p>2. Silahkan pilih Repositories yang diinginkan</p>
-                  <p>3. Pastikan terhubung internet</p>
-                </div>
-                <div>
-                    <img src={Instruction} style={{width:550, height:250}} />
-                </div>
-                
-              </div>
+              this._instruction()
             :
-              this._cardInfoRender()
-            
+              this._cardInfoRender()            
           }
 
  
