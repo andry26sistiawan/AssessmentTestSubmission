@@ -9,6 +9,7 @@ class App extends Component {
     this.state = {
       dataListRepos: [],
       dataListRepos: [],
+      aktifButton :'',
       fullname : "",
       private : '',
       ownerLogin : "",
@@ -45,7 +46,6 @@ class App extends Component {
   }
 
   parserData(data){
-    console.log(data);
     this.setState({
       aktifButton : data.name,
       fullname : data.full_name,
@@ -83,7 +83,7 @@ class App extends Component {
               {
                 this.state.dataListRepos.map((data) =>{
                   return(
-                    <button className="btn-listRepos" onClick={()=>{this.parserData(data)}} style={{backgroundColor: 'white' }}>
+                    <button className="btn-listRepos" onClick={()=>{this.parserData(data)}} style={{backgroundColor: this.state.aktifButton === data.name ? '#11D100' : 'white' }}>
                       <p>{data.name}</p>
                     </button>
                   )         
